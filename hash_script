@@ -6,6 +6,12 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
+# Check if the input is a 4-digit integer
+if [[ ! $1 =~ ^[0-9]{4}$ ]]; then
+    echo "Error: Please provide a valid 4-digit integer."
+    exit 1
+fi
+
 # Take the 4-digit integer as input
 input=$1
 
